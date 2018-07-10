@@ -1,0 +1,36 @@
+body{
+    background-color: #002B5C;
+    color:#F9A01B;
+}
+
+.container{
+     background: linear-gradient(#fedd17, #fdd10b, #fad10c, #ffa43b, #ff843f, #f84938, #fe4f3d, #fe4c40, #f42a39, #ee343c, #d9333b, #8d3639, #442b31);
+     color:white;
+     border-radius: 10px;
+     margin-bottom: 10px;
+}
+
+.container a{
+    color: #002B5C;
+}
+
+.container img{
+    margin: 0 auto;
+    width: 400px;
+    height: auto;
+}
+
+/*#image{
+    align-content: center;
+    width: 400px;
+    height: auto;
+}*/
+
+a{
+    color: white;
+}
+
+
+li a{
+    color: #F9A01B;
+}

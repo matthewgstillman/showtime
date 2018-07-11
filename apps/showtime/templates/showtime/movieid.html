@@ -1,7 +1,5 @@
-{% extends 'base.html' %}
-
 {% block title %}
-<title>Movies</title>
+<title>Movie ID</title>
 {% endblock%}
 
 
@@ -9,11 +7,11 @@
 <h6>GO BACK</h6>
 <div class="container">
     <h1>SHOWTIME</h1>
-    <h2>Find a Movie and Showtime</h2>
+    <h2>Movie/h2>
     {% for movie in movies.movies %}
+    <a href="movies/{{movie.id}}">CLICK HERE</a>
     <h6>Movie ID: {{ movie.id }}</h6>
     <h2>{{ movie.title }}</h2>
-    <h6>{{ movie.genre }}</h6>
     <img class="poster" src="{{ movie.poster_image_thumbnail }}" alt="{{ movie.title }}">
     <hr>
     {% endfor %}

@@ -15,7 +15,7 @@ body{
 }
 
 .container img{
-    margin: 0 auto;
+    margin: 5px auto;
     width: 400px;
     height: auto;
 }
@@ -25,6 +25,10 @@ body{
     width: 400px;
     height: auto;
 }*/
+
+.poster{
+    margin: 5px auto;
+}
 
 a{
     color: white;

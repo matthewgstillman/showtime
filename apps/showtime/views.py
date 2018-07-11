@@ -49,10 +49,37 @@ def cities(request):
     return render(request, 'showtime/cities.html', context)
 
 
+def genres(request):
+    url = ('https://api.cinepass.de/v4/genres/?apikey=yE5PUTGkOkyJoimmgibwO4Q5ROmmbLXp')
+    response = requests.get(url)
+    genres = response.json()
+    print(response)
+    print(genres)
+    context = {
+        'genres': genres,
+        'response': response
+    }
+    return render(request, 'showtime/genres.html', context)
+
+def movieid(request, id):
+    root = "https://api.cinepass.de/v4/movies/"
+    movieid = str(id)
+    api_key = "?apikey=yE5PUTGkOkyJoimmgibwO4Q5ROmmbLXp"
+    movie_url = str(root) + str(movieid) + str(api_key)
+    print url
+    # url = ('https://api.cinepass.de/v4/movies/?apikey=yE5PUTGkOkyJoimmgibwO4Q5ROmmbLXp')
+    url = str(movie_url)
+    print(url)
+    response = request.get(url)
+    movie = response.json()
+    return redirect(request, 'showtime/movieid.html', context)
+
+
 def movies(request):
     url = ('https://api.cinepass.de/v4/movies/?apikey=yE5PUTGkOkyJoimmgibwO4Q5ROmmbLXp')
     response = requests.get(url)
     movies = response.json()
+    # genre = movies.movies['genre']
     print(response)
     print(movies)
     context = {

@@ -11,7 +11,7 @@
     <h1>SHOWTIME</h1>
     <h2>List of Movie Genres</h2>
     {% for genre in genres.genres %}
-    {% if genre.name %}
+    {% if genre.name != "" %}
     <h2>{{ genre.name }}</h2>
     {% endif%}
     <hr>

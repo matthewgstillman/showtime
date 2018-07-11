@@ -11,9 +11,7 @@
     <h1>SHOWTIME</h1>
     <h2>Find a Movie and Showtime</h2>
     {% for movie in movies.movies %}
-    <h6>Movie ID: {{ movie.id }}</h6>
     <h2>{{ movie.title }}</h2>
-    <h6>{{ movie.genre }}</h6>
     <img class="poster" src="{{ movie.poster_image_thumbnail }}" alt="{{ movie.title }}">
     <hr>
     {% endfor %}

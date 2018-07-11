@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Movies</title>
+{% endblock%}
+
+
+{% block content %}
+<h6>GO BACK</h6>
+<div class="container">
+    <h1>SHOWTIME</h1>
+    <h2>Find a Movie and Showtime</h2>
+    {% for movie in movies.movies %}
+    <h6>Movie ID: {{ movie.id }}</h6>
+    <h2>{{ movie.title }}</h2>
+    <h6>{{ movie.genre }}</h6>
+    <img src="{{ movie.poster_image_thumbnail }}" alt="{{ movie.title }}">
+    <hr>
+    {% endfor %}
+</div>
+<h6>GO BACK</h6>
+{% endblock %}

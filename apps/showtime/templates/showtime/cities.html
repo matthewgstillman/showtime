@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Home</title>
+<title>Cities</title>
 {% endblock%}
 
 
@@ -10,10 +10,8 @@
 <div class="container">
     <h1>SHOWTIME</h1>
     <h2>Find a Movie and Showtime</h2>
-    {% for theater in showtimes.cinemas %}
-    <a href="{{ theater.website }}">{{ theater.name }}</a><br>
-    <h6>{{ theater.location.address.display_text }}</h6>
-    <h6>{{ theater.telephone }}</h6>
+    {% for city in cities.cities %}
+    <h6>{{ city.name }}</h6>
     {% endfor %}
 </div>
 <h6>GO BACK</h6>

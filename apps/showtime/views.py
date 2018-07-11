@@ -34,3 +34,29 @@ def alltheaters(request):
         'showtimes': showtimes,
     }
     return render(request, 'showtime/alltheaters.html', context)
+
+
+def cities(request):
+    url = ('https://api.cinepass.de/v4/cities/?apikey=yE5PUTGkOkyJoimmgibwO4Q5ROmmbLXp')
+    response = requests.get(url)
+    cities = response.json()
+    print(response)
+    print(cities)
+    context = {
+        'response': response,
+        'cities': cities,
+    }
+    return render(request, 'showtime/cities.html', context)
+
+
+def movies(request):
+    url = ('https://api.cinepass.de/v4/movies/?apikey=yE5PUTGkOkyJoimmgibwO4Q5ROmmbLXp')
+    response = requests.get(url)
+    movies = response.json()
+    print(response)
+    print(movies)
+    context = {
+        'response': response,
+        'movies': movies,
+    }
+    return render(request, 'showtime/movies.html', context)
